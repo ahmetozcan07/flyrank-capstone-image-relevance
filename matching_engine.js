@@ -1,103 +1,106 @@
-const fs = require('fs/promises');
-const path = require('path');
-const { Ollama } = require('ollama');
-
-const ollama = new Ollama();
-const EMBEDDING_MODEL = 'all-minilm';
-const METADATA_FILE = path.join(__dirname, 'image_metadata.json');
+const { pool } = require('./db');
+const { evaluateGuard, cosineSimilarity } = require('./guard');
+const { getEmbedding, loadImagesWithVectors } = require('./imageStore');
+require('dotenv').config();
 
 // Mismatch Guard Thresholds
-const MIN_SIMILARITY_THRESHOLD = 0.45; 
-const MIN_CONFIDENCE_THRESHOLD = 0.70;
+const MIN_SIMILARITY_THRESHOLD = Number(process.env.MIN_SIMILARITY_THRESHOLD || 0.45);
+const MIN_CONFIDENCE_THRESHOLD = Number(process.env.CONFIDENCE_THRESHOLD || 0.70);
 
+// Demo/dev posts. In a real system these come from the blog's own DB;
+// target_category / target_subject exist here purely so the guard has
+// something concrete to check against for this bounded demo corpus.
 const mockPosts = [
   {
-    id: "post_1",
     title: "The behavior of red foxes",
     content: "Red foxes are wild animals known for their orange fur and hunting skills in the forest.",
     target_category: "animal",
     target_subject: "fox"
   },
   {
-    id: "post_2",
     title: "Urban Architecture",
     content: "Modern buildings and cityscapes define the new era of civil engineering.",
     target_category: "building",
-    target_subject: "architecture"
+    target_subject: null
   }
 ];
 
-function cosineSimilarity(vecA, vecB) {
-  let dotProduct = 0, normA = 0, normB = 0;
-  for (let i = 0; i < vecA.length; i++) {
-    dotProduct += vecA[i] * vecB[i];
-    normA += Math.pow(vecA[i], 2);
-    normB += Math.pow(vecB[i], 2);
+async function seedPosts(posts) {
+  for (const post of posts) {
+    await pool.query(
+      `INSERT INTO posts (title, content, target_category, target_subject)
+       VALUES ($1, $2, $3, $4)
+       ON CONFLICT (title) DO UPDATE SET
+         content = EXCLUDED.content,
+         target_category = EXCLUDED.target_category,
+         target_subject = EXCLUDED.target_subject`,
+      [post.title, post.content, post.target_category, post.target_subject]
+    );
   }
-  return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
 }
 
-async function getEmbedding(text) {
-  const response = await ollama.embeddings({ model: EMBEDDING_MODEL, prompt: text });
-  return response.embedding;
+async function persistSuggestion(postId, topCandidate, similarity, guardResult) {
+  // One "current" suggestion per post — reruns replace it rather than piling up.
+  await pool.query(`DELETE FROM suggestions WHERE post_id = $1`, [postId]);
+  await pool.query(
+    `INSERT INTO suggestions (post_id, image_id, similarity_score, status, reject_reason)
+     VALUES ($1, $2, $3, $4, $5)`,
+    [
+      postId,
+      topCandidate.image_id,
+      similarity,
+      guardResult.rejected ? 'rejected' : 'pending',
+      guardResult.reason
+    ]
+  );
 }
 
 async function runMatchingEngine() {
   console.log('--- Starting Matching Engine ---');
-  
-  const rawData = await fs.readFile(METADATA_FILE, 'utf-8');
-  const images = JSON.parse(rawData);
 
-  console.log('Generating embeddings for images...');
-  for (const img of images) {
-    // We embed the caption to understand the image semantics[cite: 2]
-    img.vector = await getEmbedding(img.metadata.caption);
+  await seedPosts(mockPosts);
+  const posts = (await pool.query(`SELECT * FROM posts WHERE title = ANY($1::text[])`, [mockPosts.map(p => p.title)])).rows;
+
+  console.log('Loading images and embeddings...');
+  const images = await loadImagesWithVectors();
+  if (images.length === 0) {
+    console.log('No tagged images found. Run process_images.js first.');
+    await pool.end();
+    return;
   }
 
-  for (const post of mockPosts) {
+  for (const post of posts) {
     console.log(`\nEvaluating Post: "${post.title}"`);
-    const postVector = await getEmbedding(post.content);
-    
-    let candidates = images.map(img => {
-      return {
-        filename: img.filename,
-        metadata: img.metadata,
-        similarity: cosineSimilarity(postVector, img.vector)
-      };
-    });
+    const postVector = await getEmbedding(post.content, `post:${post.title}`);
 
-    // Rank candidates by semantic similarity[cite: 2]
+    const candidates = images.map(img => ({
+      ...img,
+      similarity: cosineSimilarity(postVector, img.vector)
+    }));
     candidates.sort((a, b) => b.similarity - a.similarity);
     const topCandidate = candidates[0];
 
     console.log(`Top Candidate: ${topCandidate.filename} (Similarity: ${topCandidate.similarity.toFixed(3)})`);
 
-    // The Mismatch Guard[cite: 2]
-    let rejected = false;
-    let rejectReason = "";
+    const guardResult = evaluateGuard(
+      topCandidate,
+      topCandidate.similarity,
+      post,
+      { minConfidence: MIN_CONFIDENCE_THRESHOLD, minSimilarity: MIN_SIMILARITY_THRESHOLD }
+    );
 
-    if (topCandidate.metadata.confidence < MIN_CONFIDENCE_THRESHOLD) {
-      rejected = true;
-      rejectReason = `Vision model confidence (${topCandidate.metadata.confidence}) is below threshold.`;
-    } else if (topCandidate.similarity < MIN_SIMILARITY_THRESHOLD) {
-      rejected = true;
-      rejectReason = `Semantic similarity (${topCandidate.similarity.toFixed(3)}) is below threshold. No confident match.`;
-    } else if (
-      post.target_subject === "fox" && 
-      topCandidate.metadata.subject.toLowerCase().includes("wolf")
-    ) {
-      rejected = true;
-      rejectReason = `Category mismatch: expected fox, detected wolf.`;
-    }
+    await persistSuggestion(post.id, topCandidate, topCandidate.similarity, guardResult);
 
-    if (rejected) {
+    if (guardResult.rejected) {
       console.log(`Result: REJECTED`);
-      console.log(`Reason: ${rejectReason}`);
+      console.log(`Reason: ${guardResult.reason}`);
     } else {
       console.log(`Result: APPROVED`);
-      console.log(`Subject: ${topCandidate.metadata.subject}`);
+      console.log(`Subject: ${topCandidate.subject}`);
     }
   }
+
+  await pool.end();
 }
 
 runMatchingEngine();

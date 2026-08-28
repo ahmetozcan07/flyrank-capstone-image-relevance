@@ -1,0 +1,9 @@
+run: docker compose up -d && npm run init-db && npm start
+seed: npm run batch && npm run match
+test: npm run eval
+base_url: http://localhost:3000
+endpoints:
+  - GET /health
+  - GET /api/suggestions
+  - POST /api/review
+  - GET /api/cost-log

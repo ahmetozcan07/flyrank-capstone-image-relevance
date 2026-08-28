@@ -4,6 +4,11 @@
   "description": "**Problem:** We need a system that semantically matches the right image to the right blog post based on actual image content, not just filenames. Most importantly, it must feature a \"mismatch guard\" that safely rejects an image (e.g., a wolf for a fox post) when it isn't a confident match.\r **Explicit Non-Goal:** This is not a massive image search engine. We will process a strictly bounded dataset of ~50 images to prove the concept reliably without focusing on infinite scaling.",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "init-db": "node init_db.js",
+    "batch": "node process_images.js",
+    "match": "node matching_engine.js",
+    "eval": "node eval.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +24,10 @@
   },
   "homepage": "https://github.com/ahmetozcan07/flyrank-capstone-image-relevance#readme",
   "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "ollama": "^0.6.3",
+    "pg": "^8.23.0",
     "zod": "^4.4.3"
   }
 }
