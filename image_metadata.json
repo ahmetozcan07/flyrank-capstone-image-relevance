@@ -1,0 +1,809 @@
+[
+  {
+    "filename": "alex-glebov-Y9mp8VnyreQ-unsplash.jpg",
+    "metadata": {
+      "subject": "fox",
+      "category": "animal",
+      "attributes": [
+        "color",
+        "species"
+      ],
+      "caption": "Red fox, standing still in a forest.",
+      "confidence": 1
+    },
+    "processing_time_ms": 45832,
+    "cost": 0
+  },
+  {
+    "filename": "alexander-andrews-mEdKuPYJe1I-unsplash.jpg",
+    "metadata": {
+      "subject": "fox",
+      "category": "wildlife",
+      "attributes": [
+        "fox",
+        "standing"
+      ],
+      "caption": "A fox sits alone in a forest",
+      "confidence": 0.7
+    },
+    "processing_time_ms": 3798,
+    "cost": 0
+  },
+  {
+    "filename": "alvan-nee-T-0EW-SEbsE-unsplash.jpg",
+    "metadata": {
+      "subject": "Dogs",
+      "category": "Animals",
+      "attributes": [
+        "Running",
+        "Road",
+        "Evening"
+      ],
+      "caption": "Friendly dogs enjoying a walk together in the sunset.",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 2897,
+    "cost": 0
+  },
+  {
+    "filename": "andrew-ly-iUA1cea8QiY-unsplash.jpg",
+    "metadata": {
+      "subject": "dog",
+      "category": "wolf",
+      "attributes": [
+        "long hair",
+        "dark eyes"
+      ],
+      "caption": "A majestic wolf on a snowy day.",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 2683,
+    "cost": 0
+  },
+  {
+    "filename": "ayla-meinberg-xqV9QdGOSas-unsplash.jpg",
+    "metadata": {
+      "subject": "Campfire",
+      "category": "Nature",
+      "attributes": [
+        "Flame",
+        "Wood"
+      ],
+      "caption": "A cozy campfire set against a forest backdrop.",
+      "confidence": 0.85
+    },
+    "processing_time_ms": 3642,
+    "cost": 0
+  },
+  {
+    "filename": "baptist-standaert-mx0DEnfYxic-unsplash.jpg",
+    "metadata": {
+      "subject": "dog",
+      "category": "animal",
+      "attributes": [
+        "black and white fur",
+        "long-haired",
+        "black and white face"
+      ],
+      "caption": "A happy black and white dog with a beard and eyes looking at the camera",
+      "confidence": 0.95
+    },
+    "processing_time_ms": 3111,
+    "cost": 0
+  },
+  {
+    "filename": "becca-_r6w0R6SueQ-unsplash.jpg",
+    "metadata": {
+      "subject": "Bear",
+      "category": "Wildlife",
+      "attributes": [
+        "Brown bear",
+        "Wet fur"
+      ],
+      "caption": "A wet brown bear in the wild",
+      "confidence": 0.8
+    },
+    "processing_time_ms": 2638,
+    "cost": 0
+  },
+  {
+    "filename": "chris-ensminger-i6yrDhfZ-XQ-unsplash.jpg",
+    "metadata": {
+      "subject": "wolf",
+      "category": "animal",
+      "attributes": [
+        "wolf",
+        "wolf"
+      ],
+      "caption": "The wolf is the focal point of the image, standing majestically on the forest floor with its head slightly tilted to the left.",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3514,
+    "cost": 0
+  },
+  {
+    "filename": "daniel-diesenreither-z4yzSsH5EAo-unsplash.jpg",
+    "metadata": {
+      "subject": "Bear",
+      "category": "Wildlife",
+      "attributes": [
+        "Large",
+        "Brown"
+      ],
+      "caption": "A majestic creature in its natural habitat",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 2972,
+    "cost": 0
+  },
+  {
+    "filename": "darren-welsh-zBU8dMscx4M-unsplash.jpg",
+    "metadata": {
+      "subject": "wolf",
+      "category": "animal",
+      "attributes": [
+        "wolf standing on top of a rock",
+        "wolf with its mouth open"
+      ],
+      "caption": "The wolf is howling at the top of the mountain",
+      "confidence": 0.75
+    },
+    "processing_time_ms": 3865,
+    "cost": 0
+  },
+  {
+    "filename": "diana-parkhouse-d5l17dc_lxU-unsplash.jpg",
+    "metadata": {
+      "subject": "Sunset",
+      "category": "Nature",
+      "attributes": [
+        "Deer",
+        "Grass"
+      ],
+      "caption": "A beautiful sunset with a deer silhouette in the foreground.",
+      "confidence": 0.85
+    },
+    "processing_time_ms": 3422,
+    "cost": 0
+  },
+  {
+    "filename": "divide-by-zero-FGkNt8tO04I-unsplash.jpg",
+    "metadata": {
+      "subject": "Deer",
+      "category": "Wildlife",
+      "attributes": [
+        "Brown spots",
+        "Standing on grass"
+      ],
+      "caption": "An alert deer stands in the middle of a field, with mountains in the background.",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3343,
+    "cost": 0
+  },
+  {
+    "filename": "dusan-veverkolog-nOsJYzXEG98-unsplash.jpg",
+    "metadata": {
+      "subject": "fox",
+      "category": "wildlife",
+      "attributes": [
+        "red",
+        "furry"
+      ],
+      "caption": "Peeking out from a cozy spot under a tree.",
+      "confidence": 0.8
+    },
+    "processing_time_ms": 3137,
+    "cost": 0
+  },
+  {
+    "filename": "elisabeth-arnold--E2fDQ3wPME-unsplash.jpg",
+    "metadata": {
+      "subject": "flower",
+      "category": "flower",
+      "attributes": [
+        "pink petals",
+        "green leaves"
+      ],
+      "caption": "Beautiful pink flower blooming in a lush green environment",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3406,
+    "cost": 0
+  },
+  {
+    "filename": "fabian-lauer-8YLfK3cs0UQ-unsplash.jpg",
+    "metadata": {
+      "subject": "wolf",
+      "category": "wildlife",
+      "attributes": [
+        "nocturnal",
+        "pack hunter"
+      ],
+      "caption": "Silhouette of a wolf in the night",
+      "confidence": 0.75
+    },
+    "processing_time_ms": 2639,
+    "cost": 0
+  },
+  {
+    "filename": "federico-di-dio-photography-Wstln0400pE-unsplash.jpg",
+    "metadata": {
+      "subject": "Fox",
+      "category": "Wildlife",
+      "attributes": [
+        "Fox",
+        "Wildlife"
+      ],
+      "caption": "A fox in its natural habitat",
+      "confidence": 0.85
+    },
+    "processing_time_ms": 4766,
+    "cost": 0
+  },
+  {
+    "filename": "georgy-trofimov-t2_twG8zjBk-unsplash.jpg",
+    "metadata": {
+      "subject": "Park",
+      "category": "Nature",
+      "attributes": [
+        "Greenery",
+        "Clouds",
+        "Blue sky",
+        "People",
+        "Trees"
+      ],
+      "caption": "A peaceful day at the park",
+      "confidence": 0.85
+    },
+    "processing_time_ms": 3884,
+    "cost": 0
+  },
+  {
+    "filename": "hans-jurgen-mager-KgRKlQXmHR0-unsplash.jpg",
+    "metadata": {
+      "subject": "Bear",
+      "category": "Wildlife",
+      "attributes": [
+        "Polar bear",
+        "Snow"
+      ],
+      "caption": "A polar bear in the snow, looking towards the camera.",
+      "confidence": 0.8
+    },
+    "processing_time_ms": 2909,
+    "cost": 0
+  },
+  {
+    "filename": "hans-jurgen-mager-qQWV91TTBrE-unsplash.jpg",
+    "metadata": {
+      "subject": "Polar Bear",
+      "category": "Animal",
+      "attributes": [
+        "Waving"
+      ],
+      "caption": "Waving goodbye",
+      "confidence": 0.85
+    },
+    "processing_time_ms": 2476,
+    "cost": 0
+  },
+  {
+    "filename": "james-wheeler-ZOA-cqKuJAA-unsplash.jpg",
+    "metadata": {
+      "subject": "Nature",
+      "category": "Scenic Landscape",
+      "attributes": [
+        "Mountainous landscape",
+        "Lake or water body"
+      ],
+      "caption": "Beautiful mountain lake sunrise",
+      "confidence": 1
+    },
+    "processing_time_ms": 2724,
+    "cost": 0
+  },
+  {
+    "filename": "jeremy-hynes-L6_MQVHz3Eg-unsplash.jpg",
+    "metadata": {
+      "subject": "fox",
+      "category": "animal",
+      "attributes": [
+        "red"
+      ],
+      "caption": "Fluffy and beautiful, this fox is enjoying a snowy day.",
+      "confidence": 0.95
+    },
+    "processing_time_ms": 3451,
+    "cost": 0
+  },
+  {
+    "filename": "jeremy-hynes-mwIqqM1otnk-unsplash.jpg",
+    "metadata": {
+      "subject": "fox family",
+      "category": "nature",
+      "attributes": [
+        "adult fox with cub",
+        "cub"
+      ],
+      "caption": "Mother fox with cub",
+      "confidence": 0.95
+    },
+    "processing_time_ms": 3585,
+    "cost": 0
+  },
+  {
+    "filename": "jeremy-hynes-ugJQDmtAH4o-unsplash.jpg",
+    "metadata": {
+      "subject": "Deer",
+      "category": "Wildlife",
+      "attributes": [
+        "Ruminant",
+        "Herbivore"
+      ],
+      "caption": "A majestic deer, captured in the wild.",
+      "confidence": 0.8
+    },
+    "processing_time_ms": 3034,
+    "cost": 0
+  },
+  {
+    "filename": "jeremy-manoto-K_LJyi1wqWM-unsplash.jpg",
+    "metadata": {
+      "subject": "deer",
+      "category": "animal",
+      "attributes": [
+        "antlers",
+        "eyes"
+      ],
+      "caption": "A deer standing in an enclosure.",
+      "confidence": 1
+    },
+    "processing_time_ms": 3259,
+    "cost": 0
+  },
+  {
+    "filename": "joel-holland-TRhGEGdw-YY-unsplash.jpg",
+    "metadata": {
+      "subject": "Sunset",
+      "category": "Nature",
+      "attributes": [
+        "beautiful",
+        "colorful"
+      ],
+      "caption": "Peaceful and serene",
+      "confidence": 0.8
+    },
+    "processing_time_ms": 3252,
+    "cost": 0
+  },
+  {
+    "filename": "josh-felise-mblYxasm0nk-unsplash.jpg",
+    "metadata": {
+      "subject": "wolf",
+      "category": "wildlife",
+      "attributes": [
+        "coyote",
+        "standing"
+      ],
+      "caption": "A coyote in the wilderness",
+      "confidence": 0.85
+    },
+    "processing_time_ms": 2509,
+    "cost": 0
+  },
+  {
+    "filename": "kerensa-pickett-LKQGNBZAWU8-unsplash.jpg",
+    "metadata": {
+      "subject": "River",
+      "category": "Scenic",
+      "attributes": [
+        "water",
+        "rocks",
+        "mountains"
+      ],
+      "caption": "A river with snow-capped mountains in the background on a cloudy day.",
+      "confidence": 0.7
+    },
+    "processing_time_ms": 4317,
+    "cost": 0
+  },
+  {
+    "filename": "kevin-wolf-3AbwSH1y9dc-unsplash.jpg",
+    "metadata": {
+      "subject": "Garage door",
+      "category": "Transportation",
+      "attributes": [
+        "wooden",
+        "red"
+      ],
+      "caption": "The garage door is made of wood and painted red. It has a classic design and is likely well-maintained.",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3548,
+    "cost": 0
+  },
+  {
+    "filename": "laura-college-K_Na5gCmh38-unsplash.jpg",
+    "metadata": {
+      "subject": "deer",
+      "category": "mammals",
+      "attributes": [
+        "antlers",
+        "spots"
+      ],
+      "caption": "A majestic deer in its natural habitat.",
+      "confidence": 0.95
+    },
+    "processing_time_ms": 2736,
+    "cost": 0
+  },
+  {
+    "filename": "mana5280-rGPDLlMNFF4-unsplash.jpg",
+    "metadata": {
+      "subject": "bear",
+      "category": "animal",
+      "attributes": [
+        "bear",
+        "wildlife"
+      ],
+      "caption": "The bear is roaring",
+      "confidence": 0.8
+    },
+    "processing_time_ms": 3073,
+    "cost": 0
+  },
+  {
+    "filename": "marc-olivier-jodoin-tauPAnOIGvE-unsplash.jpg",
+    "metadata": {
+      "subject": "wolf",
+      "category": "animal",
+      "attributes": [
+        "large",
+        "wild"
+      ],
+      "caption": "Striking wolf in the wilderness",
+      "confidence": 0.95
+    },
+    "processing_time_ms": 2558,
+    "cost": 0
+  },
+  {
+    "filename": "mark-basarab-y421kXlUOQk-unsplash.jpg",
+    "metadata": {
+      "subject": "Bear",
+      "category": "Animal",
+      "attributes": [
+        "Large",
+        "Brown"
+      ],
+      "caption": "A large brown bear in a relaxed pose.",
+      "confidence": 1
+    },
+    "processing_time_ms": 2932,
+    "cost": 0
+  },
+  {
+    "filename": "michael-soledad-yk--ajIjp3Y-unsplash.jpg",
+    "metadata": {
+      "subject": "Desert landscape",
+      "category": "Landscape",
+      "attributes": [
+        "Red rock formations",
+        "Mountainous terrain",
+        "Clear sky"
+      ],
+      "caption": "Vibrant desert scenery",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3671,
+    "cost": 0
+  },
+  {
+    "filename": "milli-2l0CWTpcChI-unsplash.jpg",
+    "metadata": {
+      "subject": "dog",
+      "category": "pet",
+      "attributes": [
+        "Breed",
+        "Color"
+      ],
+      "caption": "Happy dog with tongue out",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 2494,
+    "cost": 0
+  },
+  {
+    "filename": "milo-weiler-1AIYdIb3O5M-unsplash.jpg",
+    "metadata": {
+      "subject": "wolf",
+      "category": "animal",
+      "attributes": [
+        "wolf",
+        "woods"
+      ],
+      "caption": "Wolf in the woods",
+      "confidence": 0.8
+    },
+    "processing_time_ms": 2856,
+    "cost": 0
+  },
+  {
+    "filename": "mtsjrdl-5yAhL8ViUVg-unsplash.jpg",
+    "metadata": {
+      "subject": "Puppy",
+      "category": "Animal",
+      "attributes": [
+        "Breed",
+        "Color",
+        "Eyes",
+        "Expression"
+      ],
+      "caption": "Adorable puppy with blue eyes",
+      "confidence": 0.8
+    },
+    "processing_time_ms": 3834,
+    "cost": 0
+  },
+  {
+    "filename": "oliver-schweizer-UO6Pm0S_88s-unsplash.jpg",
+    "metadata": {
+      "subject": "Landscape",
+      "category": "Scenic",
+      "attributes": [
+        "Mountains",
+        "Grassland",
+        "Road",
+        "Clouds",
+        "Rivers"
+      ],
+      "caption": "Tranquil mountain valley with a winding road through it on a clear day",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3927,
+    "cost": 0
+  },
+  {
+    "filename": "oscar-sutton-yihlaRCCvd4-unsplash.jpg",
+    "metadata": {
+      "subject": "dog",
+      "category": "animal",
+      "attributes": [
+        "color",
+        "size"
+      ],
+      "caption": "A happy golden retriever running on the beach at sunset.",
+      "confidence": 0.95
+    },
+    "processing_time_ms": 3705,
+    "cost": 0
+  },
+  {
+    "filename": "paul-pastourmatzis-PjpuXmX7DAA-unsplash.jpg",
+    "metadata": {
+      "subject": "Lake and Boats",
+      "category": "Nature",
+      "attributes": [
+        "body of water",
+        "dock",
+        "wooden boats"
+      ],
+      "caption": "Scenic view of a lake with a wooden dock and small boats",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3955,
+    "cost": 0
+  },
+  {
+    "filename": "pauline-loroy-U3aF7hgUSrk-unsplash.jpg",
+    "metadata": {
+      "subject": "Dog",
+      "category": "Pet",
+      "attributes": [
+        "Breed",
+        "Color"
+      ],
+      "caption": "Playful Puppy",
+      "confidence": 1
+    },
+    "processing_time_ms": 3000,
+    "cost": 0
+  },
+  {
+    "filename": "pedro-lastra-F0dmGPe2KG0-unsplash.jpg",
+    "metadata": {
+      "subject": "deer",
+      "category": "wildlife",
+      "attributes": [
+        "antlered",
+        "grazing"
+      ],
+      "caption": "Resting in a field",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 2799,
+    "cost": 0
+  },
+  {
+    "filename": "peri-stojnic-5Vr_RVPfbMI-unsplash.jpg",
+    "metadata": {
+      "subject": "Dog",
+      "category": "Pets",
+      "attributes": [
+        "color",
+        "size",
+        "breed"
+      ],
+      "caption": "A happy dog with a collar and tag sitting on a pink background with sprinkles.",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 4035,
+    "cost": 0
+  },
+  {
+    "filename": "philipp-pilz-iQRKBNKyRpo-unsplash.jpg",
+    "metadata": {
+      "subject": "deer",
+      "category": "animal",
+      "attributes": [
+        "antlers",
+        "eyes"
+      ],
+      "caption": "A majestic deer in the wilderness, captured in the dark of the night with foggy trees in the background.",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3602,
+    "cost": 0
+  },
+  {
+    "filename": "philipp-pilz-QZ2EQuPpQJs-unsplash.jpg",
+    "metadata": {
+      "subject": "wolf",
+      "category": "animal",
+      "attributes": [
+        "canine",
+        "carnivore"
+      ],
+      "caption": "Howling wolf in forest",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3214,
+    "cost": 0
+  },
+  {
+    "filename": "ray-hennessy-xUUZcpQlqpM-unsplash.jpg",
+    "metadata": {
+      "subject": "fox",
+      "category": "wildlife",
+      "attributes": [
+        "red",
+        "fox"
+      ],
+      "caption": "Red fox standing on rocks",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 2693,
+    "cost": 0
+  },
+  {
+    "filename": "reyk-odinson-mk2chAKaZR4-unsplash.jpg",
+    "metadata": {
+      "subject": "Wolf",
+      "category": "Animal",
+      "attributes": [
+        "White",
+        "Grey"
+      ],
+      "caption": "Wolf in a studio portrait",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 4115,
+    "cost": 0
+  },
+  {
+    "filename": "sascha-bosshard-bjpRkFY2VqM-unsplash.jpg",
+    "metadata": {
+      "subject": "Wolf",
+      "category": "Animal",
+      "attributes": [
+        "large",
+        "white fur",
+        "standing"
+      ],
+      "caption": "Wolf standing on a rocky terrain",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3743,
+    "cost": 0
+  },
+  {
+    "filename": "scott-carroll-favQn8WgRyk-unsplash.jpg",
+    "metadata": {
+      "subject": "Deer",
+      "category": "Animal",
+      "attributes": [
+        "Deer",
+        "Standing"
+      ],
+      "caption": "A deer standing in a wooded area",
+      "confidence": 0.85
+    },
+    "processing_time_ms": 2697,
+    "cost": 0
+  },
+  {
+    "filename": "sunguk-kim-tIfrzHxhPYQ-unsplash.jpg",
+    "metadata": {
+      "subject": "fox",
+      "category": "animal",
+      "attributes": [
+        "red fox"
+      ],
+      "caption": "wild fox in an urban setting",
+      "confidence": 0.5
+    },
+    "processing_time_ms": 3052,
+    "cost": 0
+  },
+  {
+    "filename": "victor-g-N04FIfHhv_k-unsplash.jpg",
+    "metadata": {
+      "subject": "Dog",
+      "category": "Animal",
+      "attributes": [
+        "Breed",
+        "Color"
+      ],
+      "caption": "A small dog with a curious expression.",
+      "confidence": 0.75
+    },
+    "processing_time_ms": 3029,
+    "cost": 0
+  },
+  {
+    "filename": "y-s-aJuv14zf-ZY-unsplash.jpg",
+    "metadata": {
+      "subject": "elk",
+      "category": "wildlife",
+      "attributes": [
+        "large antlers",
+        "standing on top of hill"
+      ],
+      "caption": "Elk with long antlers in the wilderness",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3255,
+    "cost": 0
+  },
+  {
+    "filename": "yuya-yoshioka-0U1TsyC7RZE-unsplash.jpg",
+    "metadata": {
+      "subject": "deer",
+      "category": "animal",
+      "attributes": [
+        "antlered",
+        "misty background"
+      ],
+      "caption": "A majestic red deer in a misty landscape",
+      "confidence": 0.85
+    },
+    "processing_time_ms": 3357,
+    "cost": 0
+  },
+  {
+    "filename": "zdenek-machacek-_QG2C0q6J-s-unsplash.jpg",
+    "metadata": {
+      "subject": "Brown bear",
+      "category": "Wildlife",
+      "attributes": [
+        "Animal",
+        "Bear"
+      ],
+      "caption": "A bear in the wilderness",
+      "confidence": 0.9
+    },
+    "processing_time_ms": 3036,
+    "cost": 0
+  }
+]

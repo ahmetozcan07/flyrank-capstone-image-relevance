@@ -1,0 +1,25 @@
+{
+  "name": "flyrank-capstone",
+  "version": "1.0.0",
+  "description": "**Problem:** We need a system that semantically matches the right image to the right blog post based on actual image content, not just filenames. Most importantly, it must feature a \"mismatch guard\" that safely rejects an image (e.g., a wolf for a fox post) when it isn't a confident match.\r **Explicit Non-Goal:** This is not a massive image search engine. We will process a strictly bounded dataset of ~50 images to prove the concept reliably without focusing on infinite scaling.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmetozcan07/flyrank-capstone-image-relevance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ahmetozcan07/flyrank-capstone-image-relevance/issues"
+  },
+  "homepage": "https://github.com/ahmetozcan07/flyrank-capstone-image-relevance#readme",
+  "dependencies": {
+    "ollama": "^0.6.3",
+    "zod": "^4.4.3"
+  }
+}
